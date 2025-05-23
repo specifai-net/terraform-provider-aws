@@ -18,10 +18,10 @@ builds:
   goos:
     # - freebsd
     # - windows
-    # - linux
+    - linux
     - darwin
   goarch:
-    # - amd64
+    - amd64
     # - '386'
     # - arm
     - arm64
