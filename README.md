@@ -23,3 +23,13 @@ The [AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/
 - [discuss.hashicorp.com](https://discuss.hashicorp.com/c/terraform-providers/tf-aws/)
 
 _**Please note:** We take Terraform's security and our users' trust very seriously. If you believe you have found a security issue in the Terraform AWS Provider, please responsibly disclose it by contacting us at security@hashicorp.com._
+
+### HOW TO BUILD (SpecifAI)
+To make a release, follow the next steps:
+- Install goreleaser locally
+- Run the following command:
+```
+GITHUB_TOKEN=<GITHUB_TOKEN> GPG_FINGERPRINT=<FINGERPRINT> GPG_TTY=$(tty) goreleaser --clean
+```
+
+Where GITHUB_TOKEN can be found in the secrets repo and GPG_FINGERPRINT is the ID of the GPG_SECRET_KEY
