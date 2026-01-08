@@ -27,12 +27,16 @@ The [AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/
 
 _**Please note:** We take Terraform's security and our users' trust very seriously. If you believe you have found a security issue in the Terraform AWS Provider, please responsibly disclose it by contacting us at security@hashicorp.com._
 
+### HOW TO RELEASE (SpecifAI)
+Run the build as described by `HOW TO BUILD (SpecifAI)` after you have created a tag with for example `git tag v6.27.1`
+
 ### HOW TO BUILD (SpecifAI)
 To make a release, follow the next steps:
 - Install goreleaser locally
 - Run the following command:
 ```
-GITHUB_TOKEN=<GITHUB_TOKEN> GPG_FINGERPRINT=<FINGERPRINT> GPG_TTY=$(tty) goreleaser --clean
+GITHUB_TOKEN=<GITHUB_TOKEN> GPG_FINGERPRINT=<FINGERPRINT> GPG_TTY=$(tty) goreleaser --clean --parallelism 4
 ```
 
-Where GITHUB_TOKEN can be found in the secrets repo and GPG_FINGERPRINT is the ID of the GPG_SECRET_KEY
+Where GITHUB_TOKEN can be found in the secrets repo and GPG_FINGERPRINT is the ID of the GPG_SECRET_KEY (Check by using gpg --list-secret-keys --keyid-format LONG)
+When PGP key is not in your PGP ring it is also available in the secrets. Similar to the passphrase you will need during signing (This is done interactively)
