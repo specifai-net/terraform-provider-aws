@@ -1,4 +1,4 @@
-// Copyright (c) HashiCorp, Inc.
+// Copyright IBM Corp. 2014, 2025
 // SPDX-License-Identifier: MPL-2.0
 
 package redshift
@@ -9,20 +9,20 @@ var (
 	ResourceCluster                      = resourceCluster
 	ResourceClusterIAMRoles              = resourceClusterIAMRoles
 	ResourceClusterSnapshot              = resourceClusterSnapshot
-	ResourceDataShareAuthorization       = newResourceDataShareAuthorization
-	ResourceDataShareConsumerAssociation = newResourceDataShareConsumerAssociation
+	ResourceDataShareAuthorization       = newDataShareAuthorizationResource
+	ResourceDataShareConsumerAssociation = newDataShareConsumerAssociationResource
 	ResourceEndpointAccess               = resourceEndpointAccess
 	ResourceEndpointAuthorization        = resourceEndpointAuthorization
 	ResourceEventSubscription            = resourceEventSubscription
 	ResourceHSMClientCertificate         = resourceHSMClientCertificate
 	ResourceHSMConfiguration             = resourceHSMConfiguration
 	ResourceIntegration                  = newIntegrationResource
-	ResourceLogging                      = newResourceLogging
+	ResourceLogging                      = newLoggingResource
 	ResourceParameterGroup               = resourceParameterGroup
 	ResourcePartner                      = resourcePartner
 	ResourceResourcePolicy               = resourceResourcePolicy
 	ResourceScheduledAction              = resourceScheduledAction
-	ResourceSnapshotCopy                 = newResourceSnapshotCopy
+	ResourceSnapshotCopy                 = newSnapshotCopyResource
 	ResourceSnapshotCopyGrant            = resourceSnapshotCopyGrant
 	ResourceSnapshotSchedule             = resourceSnapshotSchedule
 	ResourceSnapshotScheduleAssociation  = resourceSnapshotScheduleAssociation

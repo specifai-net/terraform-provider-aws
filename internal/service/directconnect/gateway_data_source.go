@@ -1,4 +1,4 @@
-// Copyright (c) HashiCorp, Inc.
+// Copyright IBM Corp. 2014, 2025
 // SPDX-License-Identifier: MPL-2.0
 
 package directconnect
@@ -19,6 +19,7 @@ import (
 )
 
 // @SDKDataSource("aws_dx_gateway", name="Gateway")
+// @Region(global=true)
 func dataSourceGateway() *schema.Resource {
 	return &schema.Resource{
 		ReadWithoutTimeout: dataSourceGatewayRead,
